@@ -8,40 +8,9 @@
 
 
 <?php /* ------------content -------------- */ ?>
-<head>
-    <style>
-        /* http://css-tricks.com/perfect-full-page-background-image/ */
-        html {
-            background: url(img/6133364748_89f2365922_o.jpg) no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
-        body {
-            padding-top: 20px;
-            font-size: 16px;
-            font-family: "Open Sans",serif;
-            background: transparent;
-        }
-        h1 {
-            font-family: "Abel", Arial, sans-serif;
-            font-weight: 400;
-            font-size: 40px;
-        }
-        /* Override B3 .panel adding a subtly transparent background */
-        .panel {
-            background-color: rgba(255, 255, 255, 0.9);
-        }
-        .margin-base-vertical {
-            margin: 40px 0;
-        }
-    </style>
-</head>
-<body>
-<div class="container">
+<div class="login">
     <div class="row">
-        <div class="col-lg-6 col-offset-3 panel">
+        <div class="col-lg-6 col-offset-3 loginpanel">
             <h1 class="margin-base-vertical">Have you ever seen the rain?</h1>
             <p>
                 Someone told me long ago there's a calm before the storm. I know, It's been comin for some time.
@@ -52,7 +21,7 @@
             <p>
                 I want to know, have you ever seen the rain?
             </p>
-            <form class="margin-base-vertical">
+            <form class="login-margin-base-vertical">
                 <p class="input-group">
                     <span class="input-group-addon"><span class="icon-envelope"></span></span>
                     <input type="text" class="form-control input-large" name="email" placeholder="jonsnow@knowsnothi.ng" />
@@ -68,4 +37,3 @@
         </div><!-- //main content -->
     </div><!-- //row -->
 </div> <!-- //container -->
-</body>

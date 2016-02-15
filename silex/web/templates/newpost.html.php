@@ -28,7 +28,7 @@ if ($success) {
     }
 }
 ?>
-<div>
+<div class="row">
     <form class="form-horizontal" action="/newpost" method="post">
         <?php /*<!--<div class="form-group col-sm-12">
             <label class="control-label col-sm-2 " for="email">Email:</label>

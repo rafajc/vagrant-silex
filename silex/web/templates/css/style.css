@@ -1,0 +1,48 @@
+body {
+    padding-top: 50px;
+}
+
+header {
+    margin: 10px 5px 5px 0;
+    padding: 40px 15px;
+    text-align: center;
+    background-color: lightcyan;
+    border: 2px black;
+}
+
+#content {
+    margin: 20px 5px 5px 0;
+    padding: 40px 15px;
+    text-align: center;
+<!-- background-color: darkblue;
+--> border: 2px black;
+}
+
+footer {
+    margin: 10px 5px 5px 0;
+    padding: 40px 15px;
+    text-align: center;
+<!-- background-color: grey;
+--> border: 2px black;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.start {
+    text-align: start;
+}
+

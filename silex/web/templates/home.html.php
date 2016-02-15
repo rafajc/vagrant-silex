@@ -9,6 +9,8 @@
 <?php $slots->set('title', "Silex ??") ?>
 
 <?php /* ------------content -------------- */ ?>
+
+
 <header class="container col-xs-12">
     <div class="row">
         <h1 class="col-xs-12 col-sm-6">
@@ -43,7 +45,7 @@
     </div>
     <div class="col-sm-4">
         <div class="list-group">
-            <a class="list-group-item active" href="#">
+            <a class="list-group-item" href="#">
                 <h4 class="list-group-item-heading">List group item heading</h4>
                 <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
                     risus varius blandit.</p>
@@ -61,4 +63,5 @@
         </div>
     </div>
 </div>
+
 
