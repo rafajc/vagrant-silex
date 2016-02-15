@@ -1,0 +1,17 @@
+
+    /* http://css-tricks.com/perfect-full-page-background-image/ */
+.login {
+    background: url(http://css-tricks.com/perfect-full-page-background-image/img/6133364748_89f2365922_o.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Override B3 .panel adding a subtly transparent background */
+.loginpanel {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.login-margin-base-vertical {
+    margin: 40px 0;
+}
