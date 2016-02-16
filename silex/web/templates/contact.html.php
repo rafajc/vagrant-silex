@@ -24,7 +24,7 @@
             }
             ?>
         </div>
-        <form role="form" action="" method="post">
+        <form action="/contact" method="post">
             <div class="col-lg-6">
                 <div class="form-group">
                     <label for="InputName">Your Name</label>
@@ -63,8 +63,8 @@
         </form>
         <hr class="featurette-divider hidden-lg">
         <div class="col-lg-5 col-md-push-1">
+            <h3>Office Location</h3>
             <address>
-                <h3>Office Location</h3>
                 <p class="lead"><a
                         href="https://www.google.com/maps/preview?ie=UTF-8&q=The+Pentagon&fb=1&gl=us&hq=1400+Defense+Pentagon+Washington,+DC+20301-1400&cid=12647181945379443503&ei=qmYfU4H8LoL2oATa0IHIBg&ved=0CKwBEPwSMAo&safe=on">The
                         Pentagon<br>

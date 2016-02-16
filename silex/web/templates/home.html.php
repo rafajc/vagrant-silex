@@ -6,7 +6,7 @@
 
 <?php /* ------------Current Config -------------- */ ?>
 
-<?php $slots->set('title', "Silex ??") ?>
+<?php $slots->set('title', "Blogdats") ?>
 
 <?php /* ------------content -------------- */ ?>
 

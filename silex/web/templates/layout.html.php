@@ -79,7 +79,7 @@
             ?>
             <form class="navbar-form navbar-right">
                 <div class="form-group">
-                    <input placeholder="Email" class="form-control" type="text">
+                    <input placeholder="Name" class="form-control" type="text">
                 </div>
                 <div class="form-group">
                     <input placeholder="Password" class="form-control" type="password">
@@ -97,8 +97,8 @@
 <footer class="col-sm-offset-3 col-sm-6">
     <hr class="col-sm-offset-1 col-sm-10 col-lg-11"/>
     <div class="footer text-center">
-        <i><p>Ein Projekt im Rahmen Web-Engeneering Kurses an der DHBW 2015</p>
-            <p>© Rafael C.</p></i>
+        <p><i>in Projekt im Rahmen Web-Engeneering Kurses an der DHBW 2015</i></p>
+            <p><i>© Rafael C.</i></p>
     </div>
 </footer>
 </body>
