@@ -10,6 +10,25 @@ header {
     border: 2px black;
 }
 
+#startseite {
+    border-radius: 25px;
+    background: #73AD21;
+    padding: 20px;
+}
+
+#blog {
+    background: #EFEFEF;
+    border-radius: 25px;
+    padding: 20px;
+    border: 2px black;
+}
+
+#blogentry {
+    background: #FEFEFE;
+    border-radius: 25px;
+    padding: 20px;
+}
+
 #content {
     margin: 20px 5px 5px 0;
     padding: 40px 15px;

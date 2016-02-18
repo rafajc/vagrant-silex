@@ -9,6 +9,8 @@
 <?php /* ------------content -------------- */ ?>
 
 <div class="row">
+
+    <?php /*Quick Post*/ ?>
     <div class="col-md-4 hidden-sm hidden-xs">
         <br/>
         <?php
@@ -55,7 +57,8 @@
             </div>
         </form>
     </div>
-    <div class="col-sm-offset-2 col-sm-8 col-md-offset-0 col-md-6" style="word-break:break-all;word-wrap:break-word">
+    <?php /*Blog Table*/ ?>
+    <div id="blog" class="col-sm-offset-2 col-sm-8 col-md-offset-0 col-md-6" style="word-break:break-all;word-wrap:break-word">
         <div class="">
             <a href="/blog/10">Top 10</a> |
             <a href="/blog/50">Top 50</a> |
@@ -64,7 +67,7 @@
         </div>
         <div class="list-group">
             <?php foreach ($posts as $post) { ?>
-                <a class="list-group-item" href="/blogone/<?= $post['id'] ?>">
+                <a id="blogentry" class="list-group-item" href="/blogone/<?= $post['id'] ?>">
                     <div class="post-preview">
                         <?php
                         $date = new DateTime($post['created_at']);
