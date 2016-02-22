@@ -103,7 +103,7 @@
 <footer class="col-xs-12 col-sm-offset-3 col-sm-6">
     <hr class="col-sm-offset-1 col-sm-10 col-lg-11"/>
     <div class="footer text-center">
-        <p><i>in Projekt im Rahmen Web-Engeneering Kurses an der DHBW 2015</i></p>
+        <p><i>Ein Projekt im Rahmen Web-Engeneering Kurses an der DHBW 2015</i></p>
         <p><i>© Rafael C.</i></p>
     </div>
 </footer>
