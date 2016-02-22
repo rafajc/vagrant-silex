@@ -6,14 +6,13 @@
 
 <?php /* ------------Current Config -------------- */ ?>
 
-<?php $slots->set('title', "Blogdats") ?>
 
 <?php /* ------------content -------------- */ ?>
 
-<div id="startseite" class="col-xs-offset-3 col-xs-6">
+<div id="startseite" class="col-sm-offset-3 col-sm-6">
     <h1>Willkommen auf Blogdat</h1>
-    <hr class="col-xs-offset-3 col-xs-6"/>
-    <p class="col-xs-12">Dies ist ein Projekt im Rahmen der Web-Engeneering Vorlesung<br>
+    <hr class="col-sm-offset-3 col-sm-6"/>
+    <p class="col-sm-12">Dies ist ein Projekt im Rahmen der Web-Engeneering Vorlesung<br>
         an der DHBW Stuttgart STG-INF15C.</p>
 </div>
 

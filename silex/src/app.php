@@ -19,6 +19,7 @@ $app->register(new TranslationServiceProvider());
 $app->register(new LocaleServiceProvider());
 $app->register(new FormServiceProvider());
 $app->register(new CsrfServiceProvider());
+$app->register(new Silex\Provider\SessionServiceProvider());
 
 $app->register(new TwigServiceProvider(), array(
     'twig.path' => __DIR__ . '/../web/templates',
@@ -36,11 +37,11 @@ $app['templating.loader'] = function () {
     return new FilesystemLoader(__DIR__ . '/../web/templates/%name%');
 };
 
-$app['templating.template_name_parser'] = function() {
+$app['templating.template_name_parser'] = function () {
     return new TemplateNameParser();
 };
 
-$app['templating.engine.php'] = function() use ($app) {
+$app['templating.engine.php'] = function () use ($app) {
     $engine = new PhpEngine(
         $app['templating.template_name_parser'],
         $app['templating.loader']
@@ -49,11 +50,11 @@ $app['templating.engine.php'] = function() use ($app) {
     return $engine;
 };
 
-$app['templating.engine.twig'] = function() use ($app) {
+$app['templating.engine.twig'] = function () use ($app) {
     return new TwigEngine($app['twig'], $app['templating.template_name_parser']);
 };
 
-$app['templating'] = function() use ($app) {
+$app['templating'] = function () use ($app) {
     $engines = array();
     foreach ($app['templating.engines'] as $i => $engine) {
         if (is_string($engine)) {
@@ -70,5 +71,6 @@ $app->register(new DoctrineServiceProvider(), array(
         'password' => 'silex'
     ),
 ));
+
 
 return $app;

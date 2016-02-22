@@ -9,28 +9,37 @@
 <?php /* ------------content -------------- */ ?>
 
 <div class="row">
-
     <?php /*Quick Post*/ ?>
     <div class="col-md-4 hidden-sm hidden-xs">
         <br/>
-        <?php
-        // Post Success?
-        if ($success) {
-            if ($success == 1) {
-                echo "<span class=\"label label-success col-xs-offset-2 col-xs-9\"><br>Post Erfolgreich
-                    <br/><br/></span><br/><br/><br/>";
-            } else if ($success == 2) {
-                echo "<span class=\"label label-danger col-xs-offset-2 col-xs-9\"><br>Bitte Überprüfe deine Eingaben
-                    <br/><br/></span><br/><br/><br/>";
-            }
-        } else {
-            echo "<span class=\"label label-primary col-xs-offset-2 col-xs-9\"><br>Quick Post
-                    <br/><br/></span><br/><br/><br/>";
-        }
-        ?>
-        <?php $action = ($all?"/blog/":"/blogone/").$count; ?>
+        <?php /* Post Success? */ ?>
+        <?php if ($success) : ?>
+            <?php if ($success == 1) : ?>
+                <span class="label label-success col-xs-offset-2 col-xs-9">
+                    <br/>Post Erfolgreich<br/><br/>
+                </span>
+                <br/><br/><br/>
+            <?php elseif ($success == 2) : ?>
+                <span class="label label-danger col-xs-offset-2 col-xs-9">
+                    <br/>Bitte Überprüfe deine Eingaben<br/><br/>
+                </span>
+                <br/><br/><br/>
+                <?php elseif ($success == 3) : ?>
+                <span class="label label-danger col-xs-offset-2 col-xs-9">
+                    <br/>Bitte Logge dich zuerst ein<br/><br/>
+                </span>
+                <br/><br/><br/>
+            <?php endif; ?>
+        <?php else : ?>
+            <span class="label label-primary col-xs-offset-2 col-xs-9">
+                <br/>Quick Post<br/><br/>
+            </span>
+            <br/><br/><br/>
+        <?php endif; ?>
 
-        <form class="form-horizontal" action="<?=$action?>" method="post">
+        <?php $action = ($all ? "/blog/" : "/blogone/") . $count; ?>
+
+        <form class="form-horizontal" action="<?= $action ?>" method="post">
             <?php /*<!--<div class="form-group col-sm-12">
             <label class="control-label col-sm-2 " for="email">Email:</label>
             <div class="col-sm-6">
@@ -58,7 +67,7 @@
         </form>
     </div>
     <?php /*Blog Table*/ ?>
-    <div id="blog" class="col-sm-offset-2 col-sm-8 col-md-offset-0 col-md-6" style="word-break:break-all;word-wrap:break-word">
+    <div id="blog" class="col-sm-offset-2 col-sm-8 col-md-offset-0 col-md-6">
         <div class="">
             <a href="/blog/10">Top 10</a> |
             <a href="/blog/50">Top 50</a> |
@@ -66,42 +75,40 @@
             <a href="/blog/0">All</a>
         </div>
         <div class="list-group">
-            <?php foreach ($posts as $post) { ?>
-                <a id="blogentry" class="list-group-item" href="/blogone/<?= $post['id'] ?>">
+            <?php foreach ($posts as $post) : ?>
+                <a class="blogentry list-group-item" href="/blogone/<?= $post['id'] ?>">
                     <div class="post-preview">
-                        <?php
-                        $date = new DateTime($post['created_at']);
-                        ?>
-
-                        <div class="right"><p class="glyphicon glyphicon-time"><?= ' ' . $date->format('d-m-Y'); ?></p>
+                        <?php $date = new DateTime($post['created_at']); ?>
+                        <div class="right">
+                            <p class="glyphicon glyphicon-time"><?= ' ' . $date->format('d-m-Y'); ?></p>
                             <span class="left label label-default label-pill pull-xs-right"><?= $post['id'] ?></span>
                         </div>
                         <h2 class="post-title">
                             <?= $post['title'] ?>
                         </h2>
-                        <br>
+                        <br/>
                         <h4 class="list-group-item-text word-break:break-all;word-wrap:break-word">
-                            <?php if (!$all) { ?>
+                            <?php if (!$all) : ?>
                                 <?= $post['text'] ?>
-                            <?php } else { ?>
-                                <?= substr($post['text'], 0, 80) . (strlen($post['text']) > 80 ? '<br> ...' : '') ?>
-                            <?php } ?>
+                            <?php else : ?>
+                                <?= substr($post['text'], 0, 80) . (strlen($post['text']) > 80 ? '<br/> ...' : '') ?>
+                            <?php endif; ?>
                         </h4>
-                        <br>
+                        <br/>
                         <p class="post-meta right">
                             <?= (isset($post['author']) ? 'Geschrieben von ' . $post['author'] : ''); ?>
                         </p>
                     </div>
                 </a>
-            <?php }
-            if ($error) { ?>
-                <span class="label label-danger col-xs-12"><br>Der Blogeintrag wurde nicht gefunden<br/><br/>
+            <?php endforeach; ?>
+            <?php if ($error) : ?>
+                <span class="label label-danger col-xs-12"><br/>Der Blogeintrag wurde nicht gefunden<br/><br/>
             </span>
                 <br/><br/>
-            <?php } ?>
+            <?php endif; ?>
         </div>
-        <?php if (!$all) { ?>
+        <?php if (!$all) : ?>
             <p class="left"><a href="/blog/10">zurück</a></p>
-        <?php } ?>
+        <?php endif; ?>
     </div>
 </div>

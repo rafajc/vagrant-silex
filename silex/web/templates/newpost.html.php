@@ -14,20 +14,26 @@
 ?>
 
 <?php /* ------------content -------------- */ ?>
-<?php
-// Post Success?
-if ($success) {
-    if ($success == 1) {
-        echo "<span class=\"label label-success col-xs-offset-2 col-xs-6\"><br>Post Erfolgreich<br/><br/>
-            </span>
-        <br/><br/>";
-    } else if ($success == 2) {
-        echo "<span class=\"label label-danger col-xs-offset-2 col-xs-6\"><br>Bitte Überprüfe deine Eingaben<br/><br/>
-            </span>
-        <br/><br/>";
-    }
-}
-?>
+<?php /* Post Success? */ ?>
+<?php if ($success) : ?>
+    <?php if ($success == 1) : ?>
+        <span class="label label-success col-xs-offset-2 col-xs-6">
+                    <br/>Post Erfolgreich<br/><br/>
+                </span>
+        <br/><br/><br/>
+    <?php elseif ($success == 2) : ?>
+        <span class="label label-danger col-xs-offset-2 col-xs-6">
+                    <br/>Bitte Überprüfe deine Eingaben<br/><br/>
+                </span>
+        <br/><br/><br/>
+    <?php elseif ($success == 3) : ?>
+        <span class="label label-danger col-xs-offset-2 col-xs-6">
+                    <br/>Bitte Logge dich zuerst ein<br/><br/>
+                </span>
+        <br/><br/><br/>
+    <?php endif; ?>
+<?php endif; ?>
+
 <div class="row">
     <form class="form-horizontal" action="/newpost" method="post">
         <?php /*<!--<div class="form-group col-sm-12">

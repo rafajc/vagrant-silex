@@ -53,7 +53,9 @@
                     <a href="/blog/10" class="glyphicon glyphicon-th-list"> Blog</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle glyphicon glyphicon-collapse-down" data-toggle="dropdown"
+                    <a href="#"
+                       class="dropdown-toggle glyphicon glyphicon-collapse-down <?= $slots->get('active') == 'contact' ? 'active' : ''; ?>
+                    " data-toggle="dropdown"
                        role="button" aria-haspopup="true"
                        aria-expanded="false">
                         More <span class="caret"></span>
@@ -64,6 +66,7 @@
                         <li><a href="/blog/10" class="glyphicon  glyphicon-th-large"> View Top 10</a></li>
                         <li><a href="/blog/50" class="glyphicon glyphicon-th-list"> View Top 50</a></li>
                         <li><a href="/blog/100" class="glyphicon glyphicon-list"> View Top 100</a></li>
+                        <li><a href="/blog/0" class="glyphicon glyphicon-list"> View All</a></li>
                         <li role="separator" class="divider"></li>
                         <li class="<?= $slots->get('active') == 'contact' ? 'active' : ''; ?>">
                             <a href="/contact">Contact</a>
@@ -74,18 +77,21 @@
                     </ul>
                 </li>
             </ul>
-            <?php
-            //   if($session->get('email');
-            ?>
-            <form class="navbar-form navbar-right">
-                <div class="form-group">
-                    <input placeholder="Name" class="form-control" type="text">
-                </div>
-                <div class="form-group">
-                    <input placeholder="Password" class="form-control" type="password">
-                </div>
-                <button type="submit" class="btn btn-success">Sign in</button>
-            </form>
+            <?php if (isset($login)) : ?>
+                <form class="navbar-form navbar-right" action="/logout" method="post">
+                    <button type="submit" class="btn btn-success">Logout</button>
+                </form>
+            <?php else : ?>
+                <form class="navbar-form navbar-right" action="/login" method="post">
+                    <div class="form-group">
+                        <input placeholder="Name" class="form-control" type="text" name="user">
+                    </div>
+                    <div class="form-group">
+                        <input placeholder="Passwort" class="form-control" type="password" name="password">
+                    </div>
+                    <button type="submit" class="btn btn-success">Login</button>
+                </form>
+            <?php endif; ?>
         </div><!--/.nav-collapse -->
     </div>
 </nav>
@@ -94,12 +100,13 @@
     <?php $slots->output('_content') ?>
 </div>
 <?php /* ------------Footer -------------- */ ?>
-<footer class="col-sm-offset-3 col-sm-6">
+<footer class="col-xs-12 col-sm-offset-3 col-sm-6">
     <hr class="col-sm-offset-1 col-sm-10 col-lg-11"/>
     <div class="footer text-center">
         <p><i>in Projekt im Rahmen Web-Engeneering Kurses an der DHBW 2015</i></p>
-            <p><i>© Rafael C.</i></p>
+        <p><i>© Rafael C.</i></p>
     </div>
 </footer>
+
 </body>
 </html>
