@@ -24,7 +24,7 @@
                     <br/>Bitte Überprüfe deine Eingaben<br/><br/>
                 </span>
                 <br/><br/><br/>
-                <?php elseif ($success == 3) : ?>
+            <?php elseif ($success == 3) : ?>
                 <span class="label label-danger col-xs-offset-2 col-xs-9">
                     <br/>Bitte Logge dich zuerst ein<br/><br/>
                 </span>
